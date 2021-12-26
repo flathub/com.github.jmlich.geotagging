@@ -19,11 +19,14 @@
       "name": "exiv2",
       "buildsystem": "cmake-ninja",
       "builddir": true,
+      "config-opts": [
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+      ],
       "sources": [
         {
-          "type": "git",
-          "url": "https://github.com/exiv2/exiv2",
-          "commit": "6215d57d98c5feeecd62aa18398986e1466751d9"
+          "type": "archive",
+          "url": "https://exiv2.org/builds/exiv2-0.27.5-Source.tar.gz",
+          "sha256": "35a58618ab236a901ca4928b0ad8b31007ebdc0386d904409d825024e45ea6e2"
         }
       ]
     },
