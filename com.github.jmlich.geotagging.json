@@ -11,6 +11,8 @@
     "--socket=x11",
     "--socket=wayland",
     "--filesystem=home",
+    "--talk-name=org.gtk.vfs", "--talk-name=org.gtk.vfs.*",
+    "--filesystem=xdg-run/gvfs", "--filesystem=xdg-run/gvfsd",
     "--share=network",
     "--device=dri"
   ],
