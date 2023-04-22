@@ -8,7 +8,6 @@
   "command": "com.github.jmlich.geotagging",
   "finish-args": [
     "--share=ipc",
-    "--socket=x11",
     "--socket=wayland",
     "--filesystem=home",
     "--talk-name=org.gtk.vfs", "--talk-name=org.gtk.vfs.*",
