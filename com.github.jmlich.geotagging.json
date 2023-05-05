@@ -8,9 +8,13 @@
   "command": "com.github.jmlich.geotagging",
   "finish-args": [
     "--share=ipc",
-    "--socket=x11",
+    "--socket=fallback-x11",
     "--socket=wayland",
     "--filesystem=home",
+    "--filesystem=xdg-public-share",
+    "--filesystem=xdg-pictures",
+    "--filesystem=xdg-run/gvfs",
+    "--filesystem=xdg-run/gvfsd",
     "--share=network",
     "--device=dri"
   ],
@@ -25,8 +29,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://exiv2.org/builds/exiv2-0.27.5-Source.tar.gz",
-          "sha256": "35a58618ab236a901ca4928b0ad8b31007ebdc0386d904409d825024e45ea6e2"
+          "url": "https://github.com/Exiv2/exiv2/releases/download/v0.27.6/exiv2-0.27.6-Source.tar.gz",
+          "sha256": "4c192483a1125dc59a3d70b30d30d32edace9e14adf52802d2f853abf72db8a6"
         }
       ]
     },
@@ -35,13 +39,13 @@
       "buildsystem": "cmake-ninja",
       "config-opts": [
         "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DVERSION:STRING=0.7.0"
+        "-DVERSION:STRING=0.7.1"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/jmlich/geotagging.git",
-          "tag": "0.7.0"
+          "tag": "0.7.1"
         }
       ]
     }
