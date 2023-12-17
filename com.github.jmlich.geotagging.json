@@ -1,9 +1,9 @@
 {
   "app-id": "com.github.jmlich.geotagging",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.3",
+  "runtime-version": "6.6",
   "base": "io.qt.qtwebengine.BaseApp",
-  "base-version": "6.3",
+  "base-version": "6.6",
   "sdk": "org.kde.Sdk",
   "command": "com.github.jmlich.geotagging",
   "finish-args": [
@@ -39,13 +39,13 @@
       "buildsystem": "cmake-ninja",
       "config-opts": [
         "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-        "-DVERSION:STRING=0.7.1"
+        "-DVERSION:STRING=0.7.2"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/jmlich/geotagging.git",
-          "tag": "0.7.1"
+          "tag": "0.7.2"
         }
       ]
     }
