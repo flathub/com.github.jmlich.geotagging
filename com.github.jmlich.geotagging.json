@@ -1,9 +1,9 @@
 {
   "app-id": "com.github.jmlich.geotagging",
   "runtime": "org.kde.Platform",
-  "runtime-version": "6.8",
+  "runtime-version": "6.9",
   "base": "io.qt.qtwebengine.BaseApp",
-  "base-version": "6.8",
+  "base-version": "6.9",
   "sdk": "org.kde.Sdk",
   "command": "com.github.jmlich.geotagging",
   "finish-args": [
@@ -21,17 +21,25 @@
   "modules": [
     {
       "name": "exiv2",
-      "buildsystem": "cmake-ninja",
-      "builddir": true,
-      "config-opts": [
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-      ],
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/Exiv2/exiv2/releases/download/v0.27.6/exiv2-0.27.6-Source.tar.gz",
-          "sha256": "4c192483a1125dc59a3d70b30d30d32edace9e14adf52802d2f853abf72db8a6"
+          "url": "https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.7.tar.gz",
+          "sha256": "5e292b02614dbc0cee40fe1116db2f42f63ef6b2ba430c77b614e17b8d61a638",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 769,
+            "stable-only": true,
+            "url-template": "https://github.com/Exiv2/exiv2/archive/refs/tags/v$version.tar.gz"
+          }
         }
+      ],
+      "buildsystem": "cmake-ninja",
+      "builddir": true,
+      "config-opts": [
+        "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
+        "-DEXIV2_ENABLE_INIH=OFF",
+        "-DEXIV2_ENABLE_VIDEO=OFF"
       ]
     },
     {
