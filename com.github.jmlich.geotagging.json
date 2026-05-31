@@ -47,13 +47,13 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-                "-DGIT_VERSION:STRING=0.7.5"
+                "-DGIT_VERSION:STRING=0.7.6"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/jmlich/geotagging.git",
-                    "tag": "0.7.5"
+                    "tag": "0.7.6"
                 }
             ]
         }
